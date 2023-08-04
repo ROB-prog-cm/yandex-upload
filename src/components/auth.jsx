@@ -6,9 +6,9 @@ const Auth = () => {
     window.YaAuthSuggest.init({
         client_id: '1849f3d2dbcc439ab7c5db6147df099d',
         response_type: 'token',
-        redirect_uri: 'https://uploading-files-to-yandex.vercel.app/',
+        redirect_uri: 'https://uploading-files-to-yandex.vercel.app/uploading/',
       },
-      'https://uploading-files-to-yandex.vercel.app/',
+      'https://uploading-files-to-yandex.vercel.app/uploading/',
       {
         view: 'button',
         parentId: 'container',
@@ -37,7 +37,7 @@ const Auth = () => {
 
   return (
     <>
-      <div id="container">Auth</div>
+      <div id="container"></div>
     </>
   );
 };
