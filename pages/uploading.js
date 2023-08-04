@@ -15,9 +15,6 @@ const Uploading = () => {
   };
 
   const handleUpload = () => {
-    // Здесь можно реализовать логику для загрузки файлов на сервер
-    // Например, используя Fetch API или другую библиотеку для HTTP-запросов
-    // Отправить selectedFiles на сервер
     console.log('Загрузка файлов:', selectedFiles);
   };
 
