@@ -6,9 +6,9 @@ const Auth = () => {
     window.YaAuthSuggest.init({
         client_id: '1849f3d2dbcc439ab7c5db6147df099d',
         response_type: 'token',
-        redirect_uri: 'https://uploading-files-to-yandex.vercel.app/uploading',
+        redirect_uri: 'https://yandex-upload-xi.vercel.app/uploading',
       },
-      'https://uploading-files-to-yandex.vercel.app/uploading',
+      'https://yandex-upload-xi.vercel.app/',
       {
         view: 'button',
         parentId: 'container',
@@ -23,15 +23,11 @@ const Auth = () => {
       })
       .then(function (data) {
         console.log('Сообщение с токеном: ', data);
-        const message = document.createElement('div');
-        message.textContent = `Сообщение с токеном: ${JSON.stringify(data)}`;
-        document.getElementById('container').appendChild(message);
+        document.body.innerHTML += `Сообщение с токеном: ${JSON.stringify(data)}`;
       })
       .catch(function (error) {
         console.log('Что-то пошло не так: ', error);
-        const errorMessage = document.createElement('div');
-        errorMessage.textContent = `Что-то пошло не так: ${JSON.stringify(error)}`;
-        document.getElementById('container').appendChild(errorMessage);
+        document.body.innerHTML += `Что-то пошло не так: ${JSON.stringify(error)}`;
       });
   }, []);
 
