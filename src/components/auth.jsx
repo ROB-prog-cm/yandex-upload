@@ -15,7 +15,7 @@ const Auth = () => {
         buttonView: 'main',
         buttonTheme: 'light',
         buttonSize: 'm',
-        buttonBorderRadius: 0,
+        buttonBorderRadius: 20,
       }
     )
       .then(function (result) {
